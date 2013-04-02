@@ -14,7 +14,7 @@ endif
 setlocal foldmethod=syntax
 syn sync fromstart
 
-syn cluster	pfNotLS		contains=pfComment,pfTodo,pfVarAssign
+syn cluster	pfNotLS		contains=pfTodo,pfVarAssign
 syn keyword	pfCmd		altq anchor antispoof binat nat pass
 syn keyword	pfCmd		queue rdr scrub table set
 syn keyword	pfService	auth bgp domain finger ftp http https ident
