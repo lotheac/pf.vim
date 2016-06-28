@@ -2,13 +2,9 @@
 " Language:        OpenBSD packet filter configuration (pf.conf)
 " Original Author: Camiel Dobbelaar <cd@sentia.nl>
 " Maintainer:      Lauri Tirkkonen <lotheac@iki.fi>
-" Last Change:     2013 Apr 02
+" Last Change:     2016 Jun 28
 
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-  syntax clear
-elseif exists("b:current_syntax")
+if exists("b:current_syntax")
   finish
 endif
 
@@ -44,33 +40,21 @@ syn region	pfList		start=/{/ end=/}/ transparent contains=ALLBUT,pfErrClose,@pfN
 syn region	pfString	start=/"/ end=/"/ transparent contains=ALLBUT,pfString,@pfNotLS
 syn region	pfString	start=/'/ end=/'/ transparent contains=ALLBUT,pfString,@pfNotLS
 
-" Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_c_syn_inits")
-  if version < 508
-    let did_c_syn_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
-  endif
 
-  HiLink pfCmd		Statement
-  HiLink pfComment	Comment
-  HiLink pfCont		Statement
-  HiLink pfErrClose	Error
-  HiLink pfIPv4		Type
-  HiLink pfIPv6		Type
-  HiLink pfNetmask	Constant
-  HiLink pfNum		Constant
-  HiLink pfService	Constant
-  HiLink pfTable	Identifier
-  HiLink pfTodo		Todo
-  HiLink pfVar		Identifier
-  HiLink pfVarAssign	Identifier
-  HiLink pfWildAddr	Type
-
-  delcommand HiLink
-endif
+hi def link pfCmd	Statement
+hi def link pfComment	Comment
+hi def link pfCont	Statement
+hi def link pfErrClose	Error
+hi def link pfIPv4	Type
+hi def link pfIPv6	Type
+hi def link pfNetmask	Constant
+hi def link pfNum	Constant
+hi def link pfService	Constant
+hi def link pfString	String
+hi def link pfTable	Identifier
+hi def link pfTodo	Todo
+hi def link pfVar	Identifier
+hi def link pfVarAssign	Identifier
+hi def link pfWildAddr	Type
 
 let b:current_syntax = "pf"
