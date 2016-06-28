@@ -33,8 +33,8 @@ syn region	pfFold1		start=/^#\{1}>/ end=/^#\{1,3}>/me=s-1 transparent fold
 syn region	pfFold2		start=/^#\{2}>/ end=/^#\{2,3}>/me=s-1 transparent fold
 syn region	pfFold3		start=/^#\{3}>/ end=/^#\{3}>/me=s-1 transparent fold
 syn region	pfList		start=/{/ end=/}/ transparent contains=ALLBUT,pfErrClose,@pfNotLS
-syn region	pfString	start=/"/ end=/"/ transparent contains=ALLBUT,pfString,@pfNotLS
-syn region	pfString	start=/'/ end=/'/ transparent contains=ALLBUT,pfString,@pfNotLS
+syn region	pfString	start=/"/ skip=/\\"/ end=/"/ contains=pfIPv4,pfIPv6,pfNetmask,pfTable,pfVar
+syn region	pfString	start=/'/ skip=/\\'/ end=/'/ contains=pfIPv4,pfIPv6,pfNetmask,pfTable,pfVar
 
 syn keyword	pfService	802-11-iapp Microsoft-SQL-Monitor
 syn keyword	pfService	Microsoft-SQL-Server NeXTStep NextStep
