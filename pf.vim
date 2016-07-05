@@ -2,7 +2,7 @@
 " Language:        OpenBSD packet filter configuration (pf.conf)
 " Original Author: Camiel Dobbelaar <cd@sentia.nl>
 " Maintainer:      Lauri Tirkkonen <lotheac@iki.fi>
-" Last Change:     2016 Jun 28
+" Last Change:     2016 Jul 05
 
 if exists("b:current_syntax")
   finish
@@ -26,7 +26,7 @@ syn match	pfIPv6		/[a-fA-F0-9:]*::[a-fA-F0-9:.]*/
 syn match	pfIPv6		/[a-fA-F0-9:]\+:[a-fA-F0-9:]\+:[a-fA-F0-9:.]\+/
 syn match	pfNetmask	/\/\d\+/
 syn match	pfNum		/[a-zA-Z0-9_:.]\@<!\d\+[a-zA-Z0-9_:.]\@!/
-syn match	pfTable		/<\s*[a-zA-Z][a-zA-Z0-9_]*\s*>/
+syn match	pfTable		/<\s*[a-zA-Z0-9_:][a-zA-Z0-9_:.-]*\s*>/
 syn match	pfVar		/$[a-zA-Z][a-zA-Z0-9_]*/
 syn match	pfVarAssign	/^\s*[a-zA-Z][a-zA-Z0-9_]*\s*=/me=e-1
 syn region	pfFold1		start=/^#\{1}>/ end=/^#\{1,3}>/me=s-1 transparent fold
