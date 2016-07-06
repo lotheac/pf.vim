@@ -2,14 +2,14 @@
 " Language:        OpenBSD packet filter configuration (pf.conf)
 " Original Author: Camiel Dobbelaar <cd@sentia.nl>
 " Maintainer:      Lauri Tirkkonen <lotheac@iki.fi>
-" Last Change:     2016 Jul 05
+" Last Change:     2016 Jul 06
 
 if exists("b:current_syntax")
   finish
 endif
 
 setlocal foldmethod=syntax
-setlocal iskeyword+=-,+
+syn iskeyword @,48-57,_,-,+
 syn sync fromstart
 
 syn cluster	pfNotLS		contains=pfTodo,pfVarAssign
