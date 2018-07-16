@@ -17,7 +17,7 @@ syn keyword	pfCmd		anchor antispoof block include match pass queue
 syn keyword	pfCmd		queue set table
 syn match	pfCmd		/^\s*load\sanchor\>/
 syn keyword	pfTodo		TODO XXX contained
-syn keyword	pfWildAddr	all any
+syn keyword	pfWildAddr	any no-route urpf-failed self
 syn match	pfComment	/#.*$/ contains=pfTodo
 syn match	pfCont		/\\$/
 syn match	pfErrClose	/}/
