@@ -53,6 +53,7 @@ hi def link pfVar	Identifier
 hi def link pfVarAssign	Identifier
 hi def link pfWildAddr	Type
 
+" from OpenBSD src/etc/services r1.95
 syn keyword	pfService	802-11-iapp
 syn keyword	pfService	Microsoft-SQL-Monitor
 syn keyword	pfService	Microsoft-SQL-Server
@@ -124,6 +125,8 @@ syn keyword	pfService	ftp
 syn keyword	pfService	ftp-data
 syn keyword	pfService	git
 syn keyword	pfService	gopher
+syn keyword	pfService	gre-in-udp
+syn keyword	pfService	gre-udp-dtls
 syn keyword	pfService	hostname
 syn keyword	pfService	hostnames
 syn keyword	pfService	hprop
