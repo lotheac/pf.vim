@@ -2,7 +2,7 @@
 " Language:        OpenBSD packet filter configuration (pf.conf)
 " Original Author: Camiel Dobbelaar <cd@sentia.nl>
 " Maintainer:      Lauri Tirkkonen <lotheac@iki.fi>
-" Last Change:     2016 Jul 06
+" Last Change:     2018 Jul 16
 
 if exists("b:current_syntax")
   finish
